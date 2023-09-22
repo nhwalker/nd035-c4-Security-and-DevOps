@@ -50,12 +50,10 @@ public class UserController {
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
-		if(createUserRequest.getPassword() ==null || createUserRequest.getConfirmPassword()==null ||
-				createUserRequest.getPassword().length()<7 ||
+		if(createUserRequest.getPassword() ==null || createUserRequest.getConfirmPassword()==null || createUserRequest.getPassword().length()<7 ||
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
 			// TODO Log - request is too short or passwords don't match
-			ResponseEntity.BodyBuilder bldr=ResponseEntity.badRequest();
-			return bldr.build();
+			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
