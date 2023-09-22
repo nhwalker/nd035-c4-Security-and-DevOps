@@ -1,5 +1,8 @@
 package com.example.demo.model.persistence;
 
+import static com.example.demo.TestUtils.*;
+
+import com.example.demo.TestUtils;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -11,9 +14,11 @@ import java.util.concurrent.atomic.AtomicLong;
 import static org.junit.Assert.*;
 
 public class CartTest {
-    private static final AtomicLong itemId=new AtomicLong();
+
+    private TestUtils utils;
+
     @Test
-    public void test_addItem(){
+    public void addItem(){
         Cart cart = new Cart();
         cart.addItem(item(2));
         assertEquals(2, cart.getTotal().intValueExact());
@@ -22,7 +27,7 @@ public class CartTest {
     }
 
     @Test
-    public void test_removeItem_present(){
+    public void removeItem_present(){
         Item a=item(1);
         Item b=item(2);
         Item c=item(2);
@@ -39,7 +44,7 @@ public class CartTest {
     }
 
     @Test
-    public void test_removeItem_missing(){
+    public void removeItem_missing(){
         Item a=item(1);
         Item b=item(2);
         Item c=item(2);
@@ -55,7 +60,7 @@ public class CartTest {
     }
 
     @Test
-    public void test_removeItem_empty(){
+    public void removeItem_empty(){
         Item a=item(1);
 
         Cart cart = new Cart();
@@ -65,10 +70,5 @@ public class CartTest {
         assertEquals(0,cart.getTotal().intValueExact());
     }
 
-    private static Item item(int value){
-        Item item=new Item();
-        item.setId(itemId.incrementAndGet());
-        item.setPrice(BigDecimal.valueOf(value));
-        return item;
-    }
+
 }
