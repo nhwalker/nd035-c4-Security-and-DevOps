@@ -1,0 +1,541 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\project-example
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\project-example\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/nhwalker/nd035-c4-Security-and-DevOps.git # timeout=10
+Fetching upstream changes from https://github.com/nhwalker/nd035-c4-Security-and-DevOps.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.41.0.windows.3'
+ > git.exe fetch --tags --force --progress -- https://github.com/nhwalker/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/release^{commit}" # timeout=10
+Checking out Revision 6109281dd9dd904ece571cf02f1e54426565d9b8 (refs/remotes/origin/release)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 6109281dd9dd904ece571cf02f1e54426565d9b8 # timeout=10
+Commit message: "Add reset of tests"
+ > git.exe rev-list --no-walk 6109281dd9dd904ece571cf02f1e54426565d9b8 # timeout=10
+[project-example] $ cmd.exe /C "C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\MVN\bin\mvn.cmd -f starter_code/pom.xml package && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\project-example\starter_code\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ auth-course ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.controllers.CartControllerTest
+16:36:41.049 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.example.demo.controllers.CartControllerTest]
+16:36:41.056 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:36:41.063 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:36:41.090 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.demo.controllers.CartControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:36:41.100 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.controllers.CartControllerTest], using SpringBootContextLoader
+16:36:41.103 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.controllers.CartControllerTest]: class path resource [com/example/demo/controllers/CartControllerTest-context.xml] does not exist
+16:36:41.104 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.controllers.CartControllerTest]: class path resource [com/example/demo/controllers/CartControllerTestContext.groovy] does not exist
+16:36:41.104 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.controllers.CartControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:36:41.104 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.controllers.CartControllerTest]: CartControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:36:41.166 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.demo.controllers.CartControllerTest]
+16:36:41.261 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\ProgramData\Jenkins\.jenkins\workspace\project-example\starter_code\target\classes\com\example\demo\SareetaApplication.class]
+16:36:41.262 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.controllers.CartControllerTest
+16:36:41.323 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.demo.controllers.CartControllerTest]: using defaults.
+16:36:41.323 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+16:36:41.339 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4ae9cfc1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@512baff6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@632ceb35, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c93f6e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1800a575, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1458ed9c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10a9d961, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@130e116b, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@e383572, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5ddf0d24, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@363a52f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@60856961, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2fd953a6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@a4add54]
+16:36:41.341 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.controllers.CartControllerTest]
+16:36:41.341 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.controllers.CartControllerTest]
+16:36:41.342 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.controllers.CartControllerTest]
+16:36:41.342 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.controllers.CartControllerTest]
+16:36:41.343 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.controllers.CartControllerTest]
+16:36:41.343 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.controllers.CartControllerTest]
+16:36:41.347 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@602e0143 testClass = CartControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2c07545f testClass = CartControllerTest, locations = '{}', classes = '{class com.example.demo.SareetaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@e57b96d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@f5acb9d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@25fb8912, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@57cf54e1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@e7e8512, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1e1a0406], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+16:36:41.348 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.controllers.CartControllerTest]
+16:36:41.348 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.controllers.CartControllerTest]
+16:36:41.367 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2023-09-29 16:36:41.711  INFO 31520 --- [           main] c.e.demo.controllers.CartControllerTest  : Starting CartControllerTest on gondor with PID 31520 (started by GONDOR$ in C:\ProgramData\Jenkins\.jenkins\workspace\project-example\starter_code)
+2023-09-29 16:36:41.712  INFO 31520 --- [           main] c.e.demo.controllers.CartControllerTest  : No active profile set, falling back to default profiles: default
+2023-09-29 16:36:42.462  INFO 31520 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-09-29 16:36:42.712  INFO 31520 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 211ms. Found 4 repository interfaces.
+2023-09-29 16:36:43.356  INFO 31520 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$31d87922] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-29 16:36:43.727  INFO 31520 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-29 16:36:43.988  INFO 31520 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-29 16:36:44.111  INFO 31520 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-09-29 16:36:44.237  INFO 31520 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2023-09-29 16:36:44.239  INFO 31520 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-09-29 16:36:44.513  INFO 31520 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2023-09-29 16:36:45.158  INFO 31520 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-09-29 16:36:46.365  INFO 31520 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 16:36:47.908  INFO 31520 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-29 16:36:47.908  INFO 31520 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-29 16:36:48.036  WARN 31520 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 16:36:48.751  INFO 31520 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-29 16:36:49.221  INFO 31520 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1313 ms
+2023-09-29 16:36:49.684  INFO 31520 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42257df7, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fcf73b9, org.springframework.security.web.header.HeaderWriterFilter@63d75087, org.springframework.web.filter.CorsFilter@7b11ff9a, org.springframework.security.web.authentication.logout.LogoutFilter@632d1b1b, com.example.demo.security.JWTAuthenticationFilter@3bd79444, com.example.demo.security.JWTAuthenticationVerficationFilter@5671078e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c65fa69, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75d402d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fd21272, org.springframework.security.web.session.SessionManagementFilter@cae4952, org.springframework.security.web.access.ExceptionTranslationFilter@475eb4fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@eb1e868]
+2023-09-29 16:36:50.170  INFO 31520 --- [           main] c.e.demo.controllers.CartControllerTest  : Started CartControllerTest in 8.791 seconds (JVM running for 9.733)
+2023-09-29 16:36:51.070  INFO 31520 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.232 s - in com.example.demo.controllers.CartControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+2023-09-29 16:36:52.146  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.controllers.ItemControllerTest], using SpringBootContextLoader
+2023-09-29 16:36:52.148  INFO 31520 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.demo.controllers.ItemControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-09-29 16:36:52.148  INFO 31520 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.demo.controllers.ItemControllerTest]: ItemControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-29 16:36:52.152  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.controllers.ItemControllerTest
+2023-09-29 16:36:52.154  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-09-29 16:36:52.156  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@601ca994, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1acd2a14, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5432be12, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2ee5fe1e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b30b25f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@58dea0a7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@195d4780, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@18c95fbb, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@36c5a4b7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1bb3e150, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6821d4e1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3ac76ad9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@213c812a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@25814d3c]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/item
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Access Denied
+          Headers = [X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/item/name/Round%20Widget
+       Parameters = {}
+          Headers = [Authorization:"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImV4cCI6MTY5Njg4MzgxMn0.M9-dySWO6optk0hIhXrUSWcQOWyWYo07TadKGPorR7cguTOGo2Gs8yzJeB2UmNF5LgLbeQtsO7gjofahppY5Hw"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.demo.controllers.ItemController
+           Method = public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.model.persistence.Item>> com.example.demo.controllers.ItemController.getItemsByName(java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"name":"Round Widget","price":2.99,"description":"A widget that is round"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/item/1
+       Parameters = {}
+          Headers = [Authorization:"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY5Njg4MzgxMn0.P6325eWT_51KbAgQHoGiLnMbS-F3qXPHZhF96nz6mlmvbsBjSuRbaEr8vsTH2OSh1sjOls9d7b-zD45A3ZG4zw"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.demo.controllers.ItemController
+           Method = public org.springframework.http.ResponseEntity<com.example.demo.model.persistence.Item> com.example.demo.controllers.ItemController.getItemById(java.lang.Long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json;charset=UTF-8
+             Body = {"id":1,"name":"Round Widget","price":2.99,"description":"A widget that is round"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/item/name/Round%20Widget
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Access Denied
+          Headers = [X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/item/1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Access Denied
+          Headers = [X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/item
+       Parameters = {}
+          Headers = [Authorization:"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyNCIsImV4cCI6MTY5Njg4MzgxM30.f7kT8nk9hv_wp9f5TW0WWip_w3MNUS-W_vy8LAHRF40SH7j-DbdrYPEeAZivo6UMZrnrTTHb7beb69TQkugQ6A"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.demo.controllers.ItemController
+           Method = public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.model.persistence.Item>> com.example.demo.controllers.ItemController.getItems()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"name":"Round Widget","price":2.99,"description":"A widget that is round"},{"id":2,"name":"Square Widget","price":1.99,"description":"A widget that is square"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.925 s - in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+2023-09-29 16:36:53.144  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.controllers.OrderControllerTest], using SpringBootContextLoader
+2023-09-29 16:36:53.146  INFO 31520 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.demo.controllers.OrderControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-09-29 16:36:53.146  INFO 31520 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.demo.controllers.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-29 16:36:53.153  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.controllers.OrderControllerTest
+2023-09-29 16:36:53.154  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-09-29 16:36:53.155  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54c697c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62075e3d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@63e81ac6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@45775a15, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2396dc4e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7bb888b7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5825932c, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@277dddcf, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@321c01c2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@d5eca06, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@79169472, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@304cad3a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@628cb8e0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@19f9404d]
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.985 s - in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+2023-09-29 16:36:54.140  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.controllers.UserControllerTest], using SpringBootContextLoader
+2023-09-29 16:36:54.140  INFO 31520 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.demo.controllers.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-09-29 16:36:54.141  INFO 31520 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.demo.controllers.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-29 16:36:54.143  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.controllers.UserControllerTest
+2023-09-29 16:36:54.144  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-09-29 16:36:54.145  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@65fa1cd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@106c73ed, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6cd1ee, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@122a6078, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6980fa39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a000fff, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c855ef0, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@3dedc8b8, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@5352bc0e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@49b73e6c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1f138b74, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4c682826, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@a1c4f69, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a285418]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/user/user10
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Access Denied
+          Headers = [X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/user/user12
+       Parameters = {}
+          Headers = [Authorization:"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMTIiLCJleHAiOjE2OTY4ODM4MTR9.aqL1sxMY_Jsaj7e44BsjuWF589jKeECSUuhwHF0wEWPhZC-gS-XptQ9be1CY_kvXUi3soFPV3ziEWhACXyvnNQ"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.demo.controllers.UserController
+           Method = public org.springframework.http.ResponseEntity<com.example.demo.model.persistence.User> com.example.demo.controllers.UserController.findByUserName(java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json;charset=UTF-8
+             Body = {"id":11,"username":"user12"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/user/id/12
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Access Denied
+          Headers = [X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/user/id/14
+       Parameters = {}
+          Headers = [Authorization:"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMTUiLCJleHAiOjE2OTY4ODM4MTV9.b92Wxss9GTS-623h5r0IZ6kd0AbM0UALBSe5zxxkTPzsRCLqHkuMVD79WfYjUOk5Bigy31ZN42Cu9hQIGCNrXw"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.demo.controllers.UserController
+           Method = public org.springframework.http.ResponseEntity<com.example.demo.model.persistence.User> com.example.demo.controllers.UserController.findById(java.lang.Long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json;charset=UTF-8
+             Body = {"id":14,"username":"user15"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.066 s - in com.example.demo.controllers.UserControllerTest
+[INFO] Running com.example.demo.model.persistence.CartTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.example.demo.model.persistence.CartTest
+[INFO] Running com.example.demo.model.persistence.ItemTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.example.demo.model.persistence.ItemTest
+[INFO] Running com.example.demo.model.persistence.UserOrderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.example.demo.model.persistence.UserOrderTest
+[INFO] Running com.example.demo.model.persistence.UserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.example.demo.model.persistence.UserTest
+[INFO] Running com.example.demo.SareetaApplicationTests
+2023-09-29 16:36:55.221  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.SareetaApplicationTests], using SpringBootContextLoader
+2023-09-29 16:36:55.222  INFO 31520 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.demo.SareetaApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-09-29 16:36:55.222  INFO 31520 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-29 16:36:55.232  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests
+2023-09-29 16:36:55.234  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-09-29 16:36:55.236  INFO 31520 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4e2ad1f2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e0de20d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@121f97fb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70a3b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18baee88, org.springframework.test.context.transaction.TransactionalTestExecutionListener@59e67a18, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@37289e90, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@f461c9c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@40477d52, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2a1be9f8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@59b43e35, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@66297b63, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1d7f2719, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@685e5967]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.example.demo.SareetaApplicationTests
+2023-09-29 16:36:55.266  INFO 31520 --- [       Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-29 16:36:55.270  INFO 31520 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 16:36:55.277  INFO 31520 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-29 16:36:55.285  INFO 31520 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- war:3.2.2:war (default-war) @ auth-course ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [auth-course] in [C:\ProgramData\Jenkins\.jenkins\workspace\project-example\starter_code\target\auth-course-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [802 msecs]
+[INFO] Building war: C:\ProgramData\Jenkins\.jenkins\workspace\project-example\starter_code\target\auth-course-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot:2.1.5.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.996 s
+[INFO] Finished at: 2023-09-29T16:36:59-04:00
+[INFO] ------------------------------------------------------------------------
+Archiving artifacts
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying C:\ProgramData\Jenkins\.jenkins\workspace\project-example\starter_code\target\auth-course-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context null
+  [C:\ProgramData\Jenkins\.jenkins\workspace\project-example\starter_code\target\auth-course-0.0.1-SNAPSHOT.war] is not deployed. Doing a fresh deployment.
+  Deploying [C:\ProgramData\Jenkins\.jenkins\workspace\project-example\starter_code\target\auth-course-0.0.1-SNAPSHOT.war]
+Finished: SUCCESS
